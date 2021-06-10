@@ -5,9 +5,9 @@ namespace OCA\GeoBlocker\LocalizationServices;
 interface IDatabaseUpdate {
 
 	/**
-	 * Start the update of the database.
-	 * Returns true, if the update were started successfully otherwise false
-	 * (is basically not used at the moment but will maybe in the future)
+	 * Runs the update of the database.
+	 * Returns true, if the update was successfully otherwise false
+	 * It must gracefully handle the case, that the database is currently already updating (in another process).
 	 *
 	 * @return bool
 	 */
